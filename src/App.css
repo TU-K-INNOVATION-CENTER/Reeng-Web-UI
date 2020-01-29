@@ -1,38 +1,52 @@
-.App {
+ /* CreateBell  page */
+ 
+ .button-div {
+  margin-top: 20px;
+  width: 50%;
+  margin: 0 auto;
   text-align: center;
+ }
+
+ .btn-impromptu-bell {
+   margin-top: 10px;
+ }
+
+ .image-div {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+ /* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 60vh;
+  margin-bottom: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.centered .intro-text {
+  font-size: 3em;
+}
+
+.centered .sub-text {
+  font-size: 1.5em;
+}
+
+.modal {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
