@@ -36,16 +36,18 @@ const styles = theme => ({
         width: "150%"
     },
     setBell: {
-        marginTop: '10%'
+        marginTop: '10%',
+        
     },
     fabAdd: {
         marginTop: '10px'
     }
+    
 
   });
 
 
-const image = require("../images/bg-img.jpg")
+// const image = require("../images/bg-img.jpg")
 // const classes = useStyles();
 // const [open, setOpen] = React.useState(false);
 
@@ -89,11 +91,11 @@ class CreateBell extends Component {
             <div>
                 <div class="container">
                     {/* The image is selected by the school  */}
-                    <img src={image} alt="Snow" className='image-div'/>
+                    {/* <img src={image} alt="Snow" className='image-div'/> */}
                     <div className="centered">
                     <p className='intro-text'>Welcome to Reeng 'schoolName'</p>
                         {/* The sub-text is the name of the school  */}
-                        <p className='sub-text'>Set a bell</p>
+                        {/* <p className='sub-text'>Set a bell</p> */}
                     </div>
                 </div>
                 {/* The image div */}
@@ -178,17 +180,33 @@ class CreateBell extends Component {
                                 </div>
                             </Fade>
                         </Modal>
+                        <br />
 
-                        <hr />
+                        {/* <hr /> */}
                         
                         <Link to="/set-regular-bell">
                         <Button
                             halfWidth
                             variant="contained"
                             color="primary"
-                            
+                            style={{ marginTop: '1em'}}
                         >
                             Create Regular Bell
+                        </Button>
+                        </Link>
+                        <br />
+
+                        {/* <hr /> */}
+                        
+                        <Link to="/all-existing-bells">
+                        <Button
+                            halfWidth
+                            variant="contained"
+                            color="primary"
+                            style={{ marginTop: '1em'}}
+                            
+                        >
+                            View all Bells
                         </Button>
                         </Link>
                         
