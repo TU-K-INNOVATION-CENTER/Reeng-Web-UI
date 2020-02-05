@@ -10,7 +10,7 @@ import TimeCards from "../components/TimeCards";
 import { Link } from "react-router-dom";
 
 
-class RegularBell extends Component {
+class ImpromptuBell extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -32,10 +32,10 @@ class RegularBell extends Component {
     render() { 
         
         return ( 
-            <div style={{marginLeft: '20%', marginRight: '20%'}}>
+            <div className='container-impromptu'>
                 <div className='create-bell-header'>
                         <h1>
-                            Set Regular Bell
+                            Impromptu Bell
                         </h1>
                    
                         
@@ -99,4 +99,4 @@ class RegularBell extends Component {
     }
 }
  
-export default RegularBell;
+export default ImpromptuBell;

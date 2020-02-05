@@ -1,24 +1,23 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DeleteIcon from '@material-ui/icons/Delete';
+import MaterialUIPickers from "./TimePicker";
+
+var today = new Date();
+var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+var time = today.getHours() + ":" + today.getMinutes();
+
 
 const useStyles = makeStyles(theme => ({
   root: {
-    minWidth: 500,
+    minWidth: 400,
     marginBottom: '1em'
   },
   media: {
@@ -37,7 +36,8 @@ export default function TimeCards() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} >
+      
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
@@ -49,13 +49,16 @@ export default function TimeCards() {
             <DeleteIcon />
           </IconButton>
         }
-        subheader="Thu, 5 Feb"
+        subheader={date}
+        
       />
+
+    
       
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p"
         className={classes.time}>
-          {"8:00"}
+          {time}
         </Typography>
       </CardContent>
       {/* <CardActions disableSpacing>
