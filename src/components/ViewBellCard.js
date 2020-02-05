@@ -8,9 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import DeleteIcon from '@material-ui/icons/Delete';
-import TextField from '@material-ui/core/TextField';
-// import MaterialUIPickers from "./TimePicker";
-
+// import TextField from '@material-ui/core/TextField';
 var today = new Date();
 var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
 var time = today.getHours() + ":" + today.getMinutes();
@@ -62,21 +60,7 @@ export default function TimeCards() {
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p"
         className={classes.time}>
-          <form className={classes.container} noValidate>
-            <TextField
-              id="time"
-              type="time"
-              defaultValue={time}
-              className={classes.textField}
-              InputLabelProps={{
-                shrink: true,
-              }}
-              inputProps={{
-                step: 300, // 5 min
-              }}
-            />
-          </form>
-          {/* <MaterialUIPickers /> */}
+          {time}
         </Typography>
       </CardContent>
       {/* <CardActions disableSpacing>

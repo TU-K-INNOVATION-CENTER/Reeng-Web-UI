@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TimeCards from "../components/TimeCards";
+import TimeCards from "../components/ViewBellCard";
 import {
     Fab,
     Button
