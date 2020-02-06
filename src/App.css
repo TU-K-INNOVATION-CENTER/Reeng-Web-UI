@@ -83,6 +83,7 @@
 
 .view-bells-container {
   margin-bottom: 5em;
+  background-color: whitesmoke;
 }
 
 .btn-view-bells {
@@ -90,6 +91,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.root {
+  background-color: whitesmoke;
+}
+.container-impromptu {
+  background-color: whitesmoke;
 }
 
 @media only screen and (max-width: 768px) {

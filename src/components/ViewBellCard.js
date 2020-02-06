@@ -16,7 +16,10 @@ var time = today.getHours() + ":" + today.getMinutes();
 
 const useStyles = makeStyles(theme => ({
   root: {
-    minWidth: 300,
+    minWidth: 500,
+    ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
+      minWidth: 300,
+    },
     marginBottom: '1em'
   },
   media: {

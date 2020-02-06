@@ -27,6 +27,18 @@ function Copyright() {
   );
 }
 
+function TermsandConditions() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+     
+      {/* <Link color="inherit" to="https://reeng.netlify.com/" > */}
+        Terms and conditions
+      {/* </Link> */}
+     
+    </Typography>
+  )
+}
+
 const useStyles = makeStyles(theme => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -114,6 +126,8 @@ export default function SignIn() {
       </div>
       <Box mt={8}>
         <Copyright />
+        <br />
+        <TermsandConditions />
       </Box>
     </Container>
   );
