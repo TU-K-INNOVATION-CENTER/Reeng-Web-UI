@@ -15,7 +15,7 @@ class CreateBell extends Component {
                     {/* The image is selected by the school  */}
                     {/* <img src={image} alt="Snow" className='image-div'/> */}
                     <div className="centered">
-                    <p className='intro-text'>Welcome to Reeng 'schoolName'</p>
+                        <p className='intro-text'>Welcome to Reeng 'schoolName'</p>
                         {/* The sub-text is the name of the school  */}
                         {/* <p className='sub-text'>Set a bell</p> */}
                     </div>

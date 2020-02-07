@@ -24,9 +24,9 @@
 .container {
   position: relative;
   text-align: center;
-  color: white;
-  height: 45vh;
-  margin-bottom: 5%;
+  color: whitesmoke;
+  height: 50vh;
+  /* margin-bottom: 5%; */
 }
 
 
@@ -82,8 +82,9 @@
 }
 
 .view-bells-container {
-  margin-bottom: 5em;
+  padding-bottom: 5em;
   background-color: whitesmoke;
+  min-height: 100vh;
 }
 
 .btn-view-bells {
@@ -95,24 +96,29 @@
 
 .root {
   background-color: whitesmoke;
+  min-height: 100vh;
 }
 .container-impromptu {
   background-color: whitesmoke;
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .root {
     width: 100%;
+    min-height: 100vh;
     
   }
 
   .container-impromptu {
     margin: 10% 30% 20% 30%;
+    min-height: 100vh;
   }
 
   .view-bells-container {
     margin: 10% 30% 20% 30%;
+    min-height: 100vh;
 
   }
 }
