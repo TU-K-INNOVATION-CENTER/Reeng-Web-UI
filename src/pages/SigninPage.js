@@ -27,17 +27,7 @@ function Copyright() {
   );
 }
 
-function TermsandConditions() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-     
-      {/* <Link color="inherit" to="https://reeng.netlify.com/" > */}
-        Terms and conditions
-      {/* </Link> */}
-     
-    </Typography>
-  )
-}
+
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -99,35 +89,36 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <Link to='/create-bell'>
+          <Link to='/create-bell' style={{ textDecoration: 'none'}}>
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            
           >
             Sign In
           </Button>
           </Link>
           <Grid container>
-            <Grid item xs>
+            {/* <Grid item xs>
               <Link href="#" variant="body2">
                 Forgot password?
               </Link>
-            </Grid>
-            <Grid item>
+            </Grid> */}
+            {/* <Grid item>
               <Link href="#" variant="body2">
                 {"Don't have an account? Contact Us"}
               </Link>
-            </Grid>
+            </Grid> */}
           </Grid>
         </form>
       </div>
       <Box mt={8}>
         <Copyright />
         <br />
-        <TermsandConditions />
+        {/* <TermsandConditions /> */}
       </Box>
     </Container>
   );

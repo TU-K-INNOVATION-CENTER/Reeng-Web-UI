@@ -5,7 +5,7 @@ import {
     
    } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
+// import EditIcon from '@material-ui/icons/Edit';
 import TimeCards from "../components/TimeCards";
 import { Link } from "react-router-dom";
 
@@ -22,18 +22,41 @@ class ImpromptuBell extends Component {
     }
 
     // adds the input for time
-    addTimeInput = () => {
+    addTimeInput = (e) => {
+        e.preventDefault();
         var newInput = `input-${this.state.inputs.length}`;
         this.setState(prevState => ({ inputs: prevState.inputs.concat([newInput]) }));
     }
+
+    handleReset = event => {
+        event.preventDefault();
+        this.setState({ inputs: ['input-0']})
+    }
+    
 
 
    
     render() { 
         
         return ( 
-            <div className='container-impromptu'>
+            <div style={{backgroundColor: 'whitesmoke', minHeight: '100vh', paddingTop: '4em'}}>
+                
+                <div style={{marginLeft: '20%', marginRight: '20%', backgroundColor: 'whitesmoke', paddingBottom: '3em'}}>
+                <div >
+                    <Link to='/create-bell' style={{ textDecoration: 'none'}}>
+                        <Button
+                                halfWidth
+                                variant="contained"
+                                color="primary"
+                                                
+                                >
+                                    Home
+                        </Button>
+                    </Link>
+                        
+                </div>
                 <div className='create-bell-header'>
+                
                         <h1>
                             Impromptu Bell
                         </h1>
@@ -49,8 +72,7 @@ class ImpromptuBell extends Component {
                             <div key={input}>
                                 <TimeCards />
                             </div>
-                                
-
+                            
                             )}
                         <div className='btn-save'>
                             <Button
@@ -61,15 +83,24 @@ class ImpromptuBell extends Component {
                             >
                                 Save
                             </Button>
+                            <Button
+                                halfWidth
+                                variant="contained"
+                                color="primary"
+                                style={{ marginLeft: '2em'}}
+                                onClick={this.handleReset}
+                            >
+                                Reset
+                            </Button>
                         </div>
                         <div className='action-icons'>
                             <Fab size="small" color="primary" aria-label="add" onClick={this.addTimeInput}>
                                 <AddIcon />
                             </Fab>
-                            <Fab size="small" color="secondary" aria-label="edit"
+                            {/* <Fab size="small" color="secondary" aria-label="edit"
                             style={{marginLeft: '1em'}}>
                                 <EditIcon />
-                            </Fab>
+                            </Fab> */}
                         </div>
                         
                             
@@ -80,7 +111,7 @@ class ImpromptuBell extends Component {
 
 
                     <div className='btn-view-bells'>
-                        <Link to="/all-existing-bells">
+                        <Link to="/all-existing-bells" style={{ textDecoration: 'none'}}>
                             <Button
                                 halfWidth
                                 variant="contained"
@@ -93,7 +124,7 @@ class ImpromptuBell extends Component {
                         </Link>
                     </div>
                 
-                
+             </div>   
             </div>
          );
     }

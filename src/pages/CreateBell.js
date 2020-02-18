@@ -34,7 +34,7 @@ class CreateBell extends Component {
                 {/* The create-bell buttons div */}
                 <div className='button-div'>
 
-                        <Link to='set-impromptu-bell'>
+                        <Link to='set-impromptu-bell' style={{ textDecoration: 'none'}}>
                             <Button
                                 halfWidth
                                 variant="contained"
@@ -51,7 +51,7 @@ class CreateBell extends Component {
 
                         {/* <hr /> */}
                         
-                        <Link to="/set-regular-bell">
+                        <Link to="/set-regular-bell" style={{ textDecoration: 'none'}}>
                         <Button
                             halfWidth
                             variant="contained"
@@ -65,7 +65,7 @@ class CreateBell extends Component {
 
                         {/* <hr /> */}
                         
-                        <Link to="/all-existing-bells">
+                        <Link to="/all-existing-bells" style={{ textDecoration: 'none'}}>
                         <Button
                             halfWidth
                             variant="contained"
