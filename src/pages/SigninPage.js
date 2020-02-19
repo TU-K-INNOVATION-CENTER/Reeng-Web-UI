@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    marginTop: theme.spacing(8),
+    paddingTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
+    paddingTop: theme.spacing(1),
+    height: "100%"
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
@@ -35,9 +36,12 @@ export default function SignIn() {
   const classes = useStyles();
 
   return (
-    <Container component="main" maxWidth="xs">
+    <div style={{ backgroundColor: "whitesmoke"}}>
+
+    
+    <Container component="main" maxWidth="xs" >
       <CssBaseline />
-      <div className={classes.paper}>
+      <div className={classes.paper} >
         {/* <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar> */}
@@ -99,5 +103,7 @@ export default function SignIn() {
       </div>
       
     </Container>
+
+    </div>
   );
 }
