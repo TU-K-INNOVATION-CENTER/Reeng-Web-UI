@@ -5,8 +5,6 @@ import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from "react-router-dom";
 
 
@@ -17,6 +15,10 @@ const useStyles = makeStyles({
   fullList: {
     width: 'auto',
   },
+  link: {
+    textDecoration: 'none',
+    color: "black"
+  }
 });
 
 export default function DrawerComponent() {
@@ -43,12 +45,27 @@ export default function DrawerComponent() {
       <List>
         {/* {['Home', 'Create Bell', 'Regular Bell', 'Impromptu Bell'].map((text, index) => ( */}
           <ListItem button >
-            {/* <ListItemText primary='Regular' /> */}
-            <Link>Regular</Link>
+            <Link to='/create-bell' className={classes.link}>Home</Link> 
           </ListItem>
+          <ListItem button >
+            <Link to='/all-existing-bells' className={classes.link}>View all bells</Link>  
+          </ListItem>
+          <ListItem button >
+            <Link to='/set-regular-bell' className={classes.link}>Regular</Link>              
+          </ListItem>
+          <ListItem button >
+            <Link to='/set-impromptu-bell' className={classes.link}>Impromptu Bell</Link>
+          </ListItem>
+          <Divider />
+          <ListItem button >
+            <Link to='/' className={classes.link}> <Button variant='contained' color='secondary'>Log Out</Button> </Link> 
+          </ListItem>
+          
+            
+            
         {/* ))} */}
       </List>
-      <Divider />
+      
       
     </div>
   );
