@@ -6,12 +6,14 @@ import CreateBell from "../src/pages/CreateBell";
 import RegularBell from "../src/pages/RegularBell";
 import ViewBells from "../src/pages/ViewBells";
 import ImpromptuBell from "../src/pages/ImpromptuBell";
+import Header from "../src/layout/Header";
+import Footer from "../src/layout/Footer";
 
 
 function App() {
   return (
     <Router>
-    
+    <Header />
       <Switch>
         <Route exact path="/" component={SignIn} />
         <Route path="/create-bell" component={CreateBell} />
@@ -20,7 +22,7 @@ function App() {
         <Route path="/all-existing-bells" component={ViewBells} />
         
       </Switch>
-      
+      <Footer />
     </Router>
   );
 }

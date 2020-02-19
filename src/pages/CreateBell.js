@@ -11,6 +11,8 @@ class CreateBell extends Component {
     render() { 
         return ( 
             <div className="root">
+                
+                
                 <div className="container">
                     {/* The image is selected by the school  */}
                     {/* <img src={image} alt="Snow" className='image-div'/> */}

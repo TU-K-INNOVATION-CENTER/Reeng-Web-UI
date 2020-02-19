@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import TimeCards from "../components/ViewBellCard";
 import {
     Fab,
-    Button,
-   
-    
-   } from '@material-ui/core';
+    } from '@material-ui/core';
 import EditIcon from '@material-ui/icons/Edit';
 import {Link} from "react-router-dom";
 
@@ -20,19 +17,7 @@ class RegularBell extends Component {
             <div style={{backgroundColor: 'whitesmoke', minHeight: '100vh', paddingTop: '4em'}}>
                 
                 <div style={{marginLeft: '20%', marginRight: '20%', backgroundColor: 'whitesmoke', paddingBottom: '2em'}}>
-                <div >
-                    <Link to='/create-bell' style={{ textDecoration: 'none'}}>
-                        <Button
-                                halfWidth
-                                variant="contained"
-                                color="primary"
-                                                
-                                >
-                                    Home
-                        </Button>
-                    </Link>
-                        
-                </div>
+                
                 <div className='create-bell-header'>
                     
                         <h1>
